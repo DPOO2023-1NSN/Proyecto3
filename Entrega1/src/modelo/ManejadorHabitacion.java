@@ -200,12 +200,4 @@ public class ManejadorHabitacion {
         return habitaciones;
 	}
 	
-	public static void main(String[] args) {
-		Habitacion habitacion1 = new Habitacion(6, 0, 2, 0, false, true, false, 0, false, false, 0, false, false, false, false, false, false, false, false, false);
-        Habitacion habitacion2 = new Habitacion(7, 0, 2, 0, false, true, false, 0, false, false, 0, false, false, false, false, false, false, false, false, false);
-        ManejadorHabitacion mh = new ManejadorHabitacion();
-        mh.agregarHabitacion(habitacion1);
-        mh.agregarHabitacion(habitacion2);
-        System.out.println(mh.obtenerHabitaciones().get(0).getId());
-	}
 }

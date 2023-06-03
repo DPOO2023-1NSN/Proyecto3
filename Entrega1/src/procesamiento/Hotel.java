@@ -1,5 +1,7 @@
 package procesamiento;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -25,18 +27,28 @@ public class Hotel {
 	private Informacion informacion;
 	private Usuario usuarioActual;
 
+	private Boolean parqueaderoFree;
+	private Boolean piscina;
+	private Boolean zonasHumedas;
+	private Boolean bbq;
+	private Boolean wifi;
+	private Boolean recepcion;
+	private Boolean mascotas;
+
+
 
 
 	public Hotel () throws SAXException, IOException, ParserConfigurationException{
 		this.informacion = new Informacion();
+		cargarConfig("data/config.txt");
 		listaUsuarios= new ArrayList<Usuario>();
 		listaUsuarios.add(new Usuario("Absoluto", "none", "absoluto", "none"));
 	}
-	
+
 	//LOGIN Y REGISTRO
 	public int ejecutarLogIn (String nombreUsuario, String contrasenia){
 		usuarioActual= informacion.getUsuario(nombreUsuario, contrasenia);
-		
+
 		if (usuarioActual== null) {
 			return 0;
 		}
@@ -49,10 +61,12 @@ public class Hotel {
 		else {
 			return 3; //ES HUESPED
 		}
-		
+
 
 
 	}
+
+
 	public void registrarAdmin(String nombreUsuario, String contraseña, String nombre, String documento){
 		Administrador admin= new Administrador(nombreUsuario, contraseña, nombre, documento);
 		informacion.addUsuario(admin);
@@ -91,7 +105,7 @@ public class Hotel {
 	public void caragarArchivoServicios(String rutaArchivo){
 		//COMPLETAR______________________________________________________
 	}
-	
+
 	public Habitacion obtenerHabitacion(int id) {
 		Habitacion hab = null;
 		if (usuarioActual instanceof Administrador) {
@@ -202,5 +216,79 @@ public class Hotel {
 			}
 		}
 		return false;
+	}
+
+	public void cargarConfig(String rutaArchivo) { 
+		try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivo))) {
+			String linea;
+			while ((linea = br.readLine()) != null) {
+				String[] partes = linea.split(":");
+				if (partes.length == 2) {
+					String propiedad = partes[0].trim();
+					String valor = partes[1].trim();
+					asignarValorPropiedad(propiedad, valor);
+				}
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private void asignarValorPropiedad(String propiedad, String valor) {
+		switch (propiedad) {
+		case "parqueadero_pago":
+			parqueaderoFree = Boolean.parseBoolean(valor);
+			break;
+		case "piscina":
+			piscina = Boolean.parseBoolean(valor);
+			break;
+		case "zonas_humedas":
+			zonasHumedas = Boolean.parseBoolean(valor);
+			break;
+		case "bbq":
+			bbq = Boolean.parseBoolean(valor);
+			break;
+		case "wifi":
+			wifi = Boolean.parseBoolean(valor);
+			break;
+		case "recepcion":
+			recepcion = Boolean.parseBoolean(valor);
+			break;
+		case "mascotas":
+			mascotas = Boolean.parseBoolean(valor);
+			break;
+		}
+	}
+
+	public Usuario getUsuarioActual() {
+		return usuarioActual;
+	}
+
+	public Boolean getParqueaderoFree() {
+		return parqueaderoFree;
+	}
+
+	public Boolean getPiscina() {
+		return piscina;
+	}
+
+	public Boolean getZonasHumedas() {
+		return zonasHumedas;
+	}
+
+	public Boolean getWifi() {
+		return wifi;
+	}
+
+	public Boolean getRecepcion() {
+		return recepcion;
+	}
+
+	public Boolean getMascotas() {
+		return mascotas;
+	}
+	
+	public Boolean getBbq() {
+		return bbq;
 	}
 }

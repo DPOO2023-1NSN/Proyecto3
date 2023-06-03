@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <HABITACIONES>
-                        
-    
+                                
 
+    
     <HABITACION ID="6">
         <TIPO>0</TIPO>
         <CAPACIDADADULTOS>2</CAPACIDADADULTOS>
@@ -16,7 +16,7 @@
         <CALEFACCION>false</CALEFACCION>
         <TAMANIOCAMA>0</TAMANIOCAMA>
         <TV>false</TV>
-        <CAFETERA>false</CAFETERA>
+        <CAFETERA>true</CAFETERA>
         <ROPACAMA>false</ROPACAMA>
         <PLANCHA>false</PLANCHA>
         <SECADOR>false</SECADOR>

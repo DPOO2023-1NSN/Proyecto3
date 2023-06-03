@@ -1,0 +1,8 @@
+parqueadero_pago: true
+parqueadero_gratuito: true
+piscina: true
+zonas_humedas: true
+bbq: false
+wifi: true
+recepcion: true
+mascotas: true
