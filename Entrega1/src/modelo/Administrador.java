@@ -28,10 +28,9 @@ public class Administrador extends Usuario {
 		//DEPENDE DE LA ESTRUCTURA XML
 	}
 	
-	public void crearHabitacion (int id, int tipo, int capacidadAdultos, int capacidadNiños, int cobro, Boolean balcon,
-			Boolean vista, Boolean cocina) {
-		Habitacion habitacion= new Habitacion (id,tipo,capacidadAdultos,capacidadNiños, balcon, vista, cocina);
-		getinfo().addHabitacion (habitacion);	
+	public void crearHabitacion(int id, int tipo, int capacidadAdultos, int capacidadNiños, Boolean balcon, Boolean vista, Boolean cocina, int tamaño, Boolean aire, Boolean calefaccion, int tamañoCama, Boolean tv, Boolean cafetera, Boolean ropaCama, Boolean plancha, Boolean secador, Boolean voltaje, Boolean tomasA, Boolean tomasC, Boolean desayuno) {
+	    Habitacion habitacion = new Habitacion(id, tipo, capacidadAdultos, capacidadNiños, balcon, vista, cocina, tamaño, aire, calefaccion, tamañoCama, tv, cafetera, ropaCama, plancha, secador, voltaje, tomasA, tomasC, desayuno);
+	    getinfo().addHabitacion(habitacion);
 	}
 	public void crearProductoMenu (File archivoMenu) {
 		//DEPENDE DE LA ESTRUCTURA XML

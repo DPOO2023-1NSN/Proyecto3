@@ -117,6 +117,19 @@ public class ManejadorReserva {
 	            habitacionNode.setAttribute("balcon", Boolean.toString(habitacion.getBalcon()));
 	            habitacionNode.setAttribute("vista", Boolean.toString(habitacion.getVista()));
 	            habitacionNode.setAttribute("cocina", Boolean.toString(habitacion.getCocina()));
+	            habitacionNode.setAttribute("tamanio", Integer.toString(habitacion.getTamaño()));
+	            habitacionNode.setAttribute("aire", Boolean.toString(habitacion.getAire()));
+	            habitacionNode.setAttribute("calefaccion", Boolean.toString(habitacion.getCalefaccion()));
+	            habitacionNode.setAttribute("tamanioCama", Integer.toString(habitacion.getTamañoCama()));
+	            habitacionNode.setAttribute("tv", Boolean.toString(habitacion.getTv()));
+	            habitacionNode.setAttribute("cafetera", Boolean.toString(habitacion.getCafetera()));
+	            habitacionNode.setAttribute("ropaCama", Boolean.toString(habitacion.getRopaCama()));
+	            habitacionNode.setAttribute("plancha", Boolean.toString(habitacion.getPlancha()));
+	            habitacionNode.setAttribute("secador", Boolean.toString(habitacion.getSecador()));
+	            habitacionNode.setAttribute("voltaje", Boolean.toString(habitacion.getVoltaje()));
+	            habitacionNode.setAttribute("tomasA", Boolean.toString(habitacion.getTomasA()));
+	            habitacionNode.setAttribute("tomasC", Boolean.toString(habitacion.getTomasC()));
+	            habitacionNode.setAttribute("desayuno", Boolean.toString(habitacion.getDesayuno()));
 	            reservaNode.appendChild(habitacionNode);
 	        }
 
@@ -187,23 +200,38 @@ public class ManejadorReserva {
 		return reservas;
 	}
 	
-	public ArrayList<Habitacion> obtenerHabDeNodeList(NodeList nodosHabitaciones){
-		ArrayList<Habitacion> habitaciones = new ArrayList<>();
-		for (int i = 0; i < nodosHabitaciones.getLength(); i++) {
-			Element elementoHabitacion = (Element) nodosHabitaciones.item(i);
-			int id = Integer.parseInt(elementoHabitacion.getAttribute("id"));
-            int tipo = Integer.parseInt(elementoHabitacion.getAttribute("tipo"));
-            int capacidadAdultos = Integer.parseInt(elementoHabitacion.getAttribute("capacidadAdultos"));
-            int capacidadNinios = Integer.parseInt(elementoHabitacion.getAttribute("capacidadNinios"));
-            boolean balcon = Boolean.parseBoolean(elementoHabitacion.getAttribute("balcon"));
-            boolean vista = Boolean.parseBoolean(elementoHabitacion.getAttribute("vista"));
-            boolean cocina = Boolean.parseBoolean(elementoHabitacion.getAttribute("cocina"));
-            
-            Habitacion habitacion = new Habitacion(id, tipo, capacidadAdultos, capacidadNinios, balcon, vista, cocina);
-            habitaciones.add(habitacion);
-		}
-		
-		return habitaciones;
+	public ArrayList<Habitacion> obtenerHabDeNodeList(NodeList nodosHabitaciones) {
+	    ArrayList<Habitacion> habitaciones = new ArrayList<>();
+	    for (int i = 0; i < nodosHabitaciones.getLength(); i++) {
+	        Element elementoHabitacion = (Element) nodosHabitaciones.item(i);
+	        int id = Integer.parseInt(elementoHabitacion.getAttribute("id"));
+	        int tipo = Integer.parseInt(elementoHabitacion.getAttribute("tipo"));
+	        int capacidadAdultos = Integer.parseInt(elementoHabitacion.getAttribute("capacidadAdultos"));
+	        int capacidadNinios = Integer.parseInt(elementoHabitacion.getAttribute("capacidadNinios"));
+	        boolean reservada = Boolean.parseBoolean(elementoHabitacion.getAttribute("reservada"));
+	        boolean balcon = Boolean.parseBoolean(elementoHabitacion.getAttribute("balcon"));
+	        boolean vista = Boolean.parseBoolean(elementoHabitacion.getAttribute("vista"));
+	        boolean cocina = Boolean.parseBoolean(elementoHabitacion.getAttribute("cocina"));
+	        int tamaño = Integer.parseInt(elementoHabitacion.getAttribute("tamanio"));
+	        boolean aire = Boolean.parseBoolean(elementoHabitacion.getAttribute("aire"));
+	        boolean calefaccion = Boolean.parseBoolean(elementoHabitacion.getAttribute("calefaccion"));
+	        int tamañoCama = Integer.parseInt(elementoHabitacion.getAttribute("tamanioCama"));
+	        boolean tv = Boolean.parseBoolean(elementoHabitacion.getAttribute("tv"));
+	        boolean cafetera = Boolean.parseBoolean(elementoHabitacion.getAttribute("cafetera"));
+	        boolean ropaCama = Boolean.parseBoolean(elementoHabitacion.getAttribute("ropaCama"));
+	        boolean plancha = Boolean.parseBoolean(elementoHabitacion.getAttribute("plancha"));
+	        boolean secador = Boolean.parseBoolean(elementoHabitacion.getAttribute("secador"));
+	        boolean voltaje = Boolean.parseBoolean(elementoHabitacion.getAttribute("voltaje"));
+	        boolean tomasA = Boolean.parseBoolean(elementoHabitacion.getAttribute("tomasA"));
+	        boolean tomasC = Boolean.parseBoolean(elementoHabitacion.getAttribute("tomasC"));
+	        boolean desayuno = Boolean.parseBoolean(elementoHabitacion.getAttribute("desayuno"));
+
+	        Habitacion habitacion = new Habitacion(id, tipo, capacidadAdultos, capacidadNinios, balcon, vista, cocina, tamaño, aire, calefaccion, tamañoCama, tv, cafetera, ropaCama, plancha, secador, voltaje, tomasA, tomasC, desayuno);
+	        habitacion.setReservada(reservada);
+	        habitaciones.add(habitacion);
+	    }
+
+	    return habitaciones;
 	}
 	
 	
@@ -267,5 +295,7 @@ public class ManejadorReserva {
 		
 		return grupo;
 	}
+	
+	
 	}
 

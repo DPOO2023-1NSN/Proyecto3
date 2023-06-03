@@ -1,137 +1,50 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <HABITACIONES>
-                    
+                        
     
-    
-    
-    
-    <HABITACION ID="506">
-                                        
-        
-        
-        
+
+    <HABITACION ID="6">
         <TIPO>0</TIPO>
-                                        
-        
-        
-        
-        <CAPACIDADADULTOS>0</CAPACIDADADULTOS>
-                                        
-        
-        
-        
+        <CAPACIDADADULTOS>2</CAPACIDADADULTOS>
         <CAPACIDADNINIOS>0</CAPACIDADNINIOS>
-                                        
-        
-        
-        
-        <BALCON>true</BALCON>
-                                        
-        
-        
-        
-        <VISTA>false</VISTA>
-                                        
-        
-        
-        
-        <COCINA>true</COCINA>
-                                    
-    
-    
-    
+        <RESERVADA>false</RESERVADA>
+        <BALCON>false</BALCON>
+        <VISTA>true</VISTA>
+        <COCINA>false</COCINA>
+        <TAMANIO>0</TAMANIO>
+        <AIRE>false</AIRE>
+        <CALEFACCION>false</CALEFACCION>
+        <TAMANIOCAMA>0</TAMANIOCAMA>
+        <TV>false</TV>
+        <CAFETERA>false</CAFETERA>
+        <ROPACAMA>false</ROPACAMA>
+        <PLANCHA>false</PLANCHA>
+        <SECADOR>false</SECADOR>
+        <VOLTAJE>false</VOLTAJE>
+        <TOMASA>false</TOMASA>
+        <TOMASC>false</TOMASC>
+        <DESAYUNO>false</DESAYUNO>
     </HABITACION>
-                
-    
-    
-    
-    <HABITACION ID="507">
-                                
-        
-        
+    <HABITACION ID="7">
         <TIPO>0</TIPO>
-                                
-        
-        
-        <CAPACIDADADULTOS>0</CAPACIDADADULTOS>
-                                
-        
-        
+        <CAPACIDADADULTOS>2</CAPACIDADADULTOS>
         <CAPACIDADNINIOS>0</CAPACIDADNINIOS>
-                                
-        
-        
-        <BALCON>true</BALCON>
-                                
-        
-        
-        <VISTA>false</VISTA>
-                                
-        
-        
-        <COCINA>true</COCINA>
-                            
-    
-    
-    </HABITACION>
-            
-    
-    
-    <HABITACION ID="508">
-                        
-        
-        <TIPO>0</TIPO>
-                        
-        
-        <CAPACIDADADULTOS>0</CAPACIDADADULTOS>
-                        
-        
-        <CAPACIDADNINIOS>0</CAPACIDADNINIOS>
-                        
-        
-        <BALCON>true</BALCON>
-                        
-        
-        <VISTA>false</VISTA>
-                        
-        
-        <COCINA>true</COCINA>
-                    
-    
-    </HABITACION>
-        
-    
-    <HABITACION ID="0">
-                
-        <TIPO>0</TIPO>
-                
-        <CAPACIDADADULTOS>0</CAPACIDADADULTOS>
-                
-        <CAPACIDADNINIOS>0</CAPACIDADNINIOS>
-                
-        <BALCON>true</BALCON>
-                
-        <VISTA>false</VISTA>
-                
-        <COCINA>true</COCINA>
-            
-    </HABITACION>
-    
-    <HABITACION ID="0">
-        <TIPO>0</TIPO>
-        <CAPACIDADADULTOS>0</CAPACIDADADULTOS>
-        <CAPACIDADNINIOS>0</CAPACIDADNINIOS>
-        <BALCON>true</BALCON>
-        <VISTA>false</VISTA>
-        <COCINA>true</COCINA>
-    </HABITACION>
-    
-    <HABITACION ID="2020">
-        <TIPO>1</TIPO>
-        <CAPACIDADADULTOS>0</CAPACIDADADULTOS>
-        <CAPACIDADNINIOS>0</CAPACIDADNINIOS>
-        <BALCON>true</BALCON>
-        <VISTA>false</VISTA>
-        <COCINA>true</COCINA>
+        <RESERVADA>false</RESERVADA>
+        <BALCON>false</BALCON>
+        <VISTA>true</VISTA>
+        <COCINA>false</COCINA>
+        <TAMANIO>0</TAMANIO>
+        <AIRE>false</AIRE>
+        <CALEFACCION>false</CALEFACCION>
+        <TAMANIOCAMA>0</TAMANIOCAMA>
+        <TV>false</TV>
+        <CAFETERA>false</CAFETERA>
+        <ROPACAMA>false</ROPACAMA>
+        <PLANCHA>false</PLANCHA>
+        <SECADOR>false</SECADOR>
+        <VOLTAJE>false</VOLTAJE>
+        <TOMASA>false</TOMASA>
+        <TOMASC>false</TOMASC>
+        <DESAYUNO>false</DESAYUNO>
     </HABITACION>
 </HABITACIONES>

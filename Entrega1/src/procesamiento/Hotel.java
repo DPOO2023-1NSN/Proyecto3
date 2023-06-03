@@ -26,6 +26,7 @@ public class Hotel {
 	private Usuario usuarioActual;
 
 
+
 	public Hotel () throws SAXException, IOException, ParserConfigurationException{
 		this.informacion = new Informacion();
 		listaUsuarios= new ArrayList<Usuario>();
@@ -79,9 +80,10 @@ public class Hotel {
 	{
 		//COMPLETAR---------------------------------------------------------------
 	}
-	public void crearHabitacion(int id, int tipo, int capacidadAdultos, int capacidadNiños, Boolean balcon, Boolean vista, Boolean cocina){
-		Habitacion nuevHabitacion= new Habitacion(id, tipo, capacidadAdultos, capacidadNiños, balcon, vista, cocina);
-		listaUsuarios.get(0).getinfo().addHabitacion(nuevHabitacion);
+	public void crearHabitacion(int id, int tipo, int capacidadAdultos, int capacidadNiños, Boolean balcon, Boolean vista, Boolean cocina, int tamaño, Boolean aire, Boolean calefaccion, int tamañoCama, Boolean tv, Boolean cafetera, Boolean ropaCama, Boolean plancha, Boolean secador, Boolean voltaje, Boolean tomasA, Boolean tomasC, Boolean desayuno){
+		if (usuarioActual instanceof Administrador) {
+			((Administrador)usuarioActual).crearHabitacion(id, tipo, capacidadAdultos, capacidadNiños, balcon, vista, cocina, tamaño, aire, calefaccion, tamañoCama, tv, cafetera, ropaCama, plancha, secador, voltaje, tomasA, tomasC, desayuno);
+		}
 	}
 	public void caragarArchivoHabitaciones(String rutaArchivo){
 		//COMPLETAR______________________________________________________
