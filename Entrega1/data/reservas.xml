@@ -1,116 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <RESERVAS>
-                                                                                                        
+                                                                                                                            
 
 
     
+
     
-    <RESERVA estado="RESERVADA" fechaFin="2023-06-09" fechaInicio="2023-06-02" id="2973" precio="0">
-                        
-        
-        <HABITACION aire="false" balcon="false" cafetera="false" calefaccion="false" capacidadAdultos="2" capacidadNinios="0" cocina="false" desayuno="false" id="5006" plancha="false" reservada="false" ropaCama="false" secador="false" tamanio="0" tamanioCama="0" tipo="0" tomasA="false" tomasC="false" tv="false" vista="true" voltaje="false"/>
-                        
-        
-        <HABITACION aire="false" balcon="false" cafetera="false" calefaccion="false" capacidadAdultos="2" capacidadNinios="0" cocina="false" desayuno="false" id="5008" plancha="false" reservada="false" ropaCama="false" secador="false" tamanio="0" tamanioCama="0" tipo="0" tomasA="false" tomasC="false" tv="false" vista="true" voltaje="false"/>
-                        
-        
-        <GRUPO fechaCheckIn="2023-06-02" fechaCheckOut="2023-06-09" realizoCheckIn="false" realizoCheckOut="false">
-                                    
-            
-            <HUESPEDR contraseña="pass2" correoElectronico="pedro@example.com" documento="87654321" edad="30" nombre="jajajasoyyo" nombreUsuario="huesped" telefono="87654321"/>
-                                    
-            
-            <SERVICIO id="12" nombre="gaseosa" pagado="false" precio="1400"/>
-                                    
-            
-            <HUESPED contraseña="pass1" correoElectronico="juan@example.com" documento="12345678" edad="25" nombre="Juan" nombreUsuario="user1" telefono="12345678"/>
-                                    
-            
-            <HUESPED contraseña="pass2" correoElectronico="pedro@example.com" documento="87654321" edad="30" nombre="Pedro" nombreUsuario="user2" telefono="87654321"/>
+    
+    
+    <RESERVA estado="RESERVADA" fechaFin="2023-01-30" fechaInicio="2023-01-26" id="7038" precio="0">
                                 
         
-        </GRUPO>
-                    
-    
-    </RESERVA>
-            
-    
-    <RESERVA estado="RESERVADA" fechaFin="2023-06-09" fechaInicio="2023-06-02" id="6865" precio="0">
-                        
         
-        <GRUPO fechaCheckIn="2023-06-02" fechaCheckOut="2023-06-09" realizoCheckIn="false" realizoCheckOut="false">
-                                    
+        <GRUPO fechaCheckIn="2023-01-26" fechaCheckOut="2023-01-30" realizoCheckIn="false" realizoCheckOut="false">
+                                                
             
-            <HUESPEDR contraseña="pass2" correoElectronico="pedro@example.com" documento="87654321" edad="30" nombre="jajajasoyyo" nombreUsuario="huesped" telefono="87654321"/>
-                                    
             
-            <SERVICIO id="12" nombre="gaseosa" pagado="false" precio="1400"/>
-                                    
+            <HUESPEDR contraseña="sergio" correoElectronico="313" documento="213" edad="0" nombre="responsable" nombreUsuario="sergio" telefono="13221"/>
+                                                
             
-            <HUESPED contraseña="pass1" correoElectronico="juan@example.com" documento="12345678" edad="25" nombre="Juan" nombreUsuario="user1" telefono="12345678"/>
-                                    
             
-            <HUESPED contraseña="pass2" correoElectronico="pedro@example.com" documento="87654321" edad="30" nombre="Pedro" nombreUsuario="user2" telefono="87654321"/>
-                                
+            <HUESPED contraseña="sergio" correoElectronico="313" documento="213" edad="0" nombre="segundo" nombreUsuario="sergio" telefono="13221"/>
+                                            
+        
         
         </GRUPO>
-                    
+                            
+    
     
     </RESERVA>
-        
-    
-    <RESERVA estado="RESERVADA" fechaFin="2023-06-09" fechaInicio="2023-06-02" id="3629" precio="0">
-                
-        <HABITACION aire="false" balcon="false" cafetera="false" calefaccion="false" capacidadAdultos="2" capacidadNinios="0" cocina="false" desayuno="false" id="5006" plancha="false" reservada="false" ropaCama="false" secador="false" tamanio="0" tamanioCama="0" tipo="0" tomasA="false" tomasC="false" tv="false" vista="true" voltaje="false"/>
-                
-        <HABITACION aire="false" balcon="false" cafetera="false" calefaccion="false" capacidadAdultos="2" capacidadNinios="0" cocina="false" desayuno="false" id="5008" plancha="false" reservada="false" ropaCama="false" secador="false" tamanio="0" tamanioCama="0" tipo="0" tomasA="false" tomasC="false" tv="false" vista="true" voltaje="false"/>
-                
-        <GRUPO fechaCheckIn="2023-06-02" fechaCheckOut="2023-06-09" realizoCheckIn="false" realizoCheckOut="false">
-                        
-            <HUESPEDR contraseña="pass2" correoElectronico="pedro@example.com" documento="87654321" edad="30" nombre="jajajasoyyo" nombreUsuario="huesped" telefono="87654321"/>
-                        
-            <SERVICIO id="12" nombre="gaseosa" pagado="false" precio="1400"/>
-                        
-            <HUESPED contraseña="pass1" correoElectronico="juan@example.com" documento="12345678" edad="25" nombre="Juan" nombreUsuario="user1" telefono="12345678"/>
-                        
-            <HUESPED contraseña="pass2" correoElectronico="pedro@example.com" documento="87654321" edad="30" nombre="Pedro" nombreUsuario="user2" telefono="87654321"/>
-                    
-        </GRUPO>
             
-    </RESERVA>
-        
-    <RESERVA estado="RESERVADA" fechaFin="2023-06-09" fechaInicio="2023-06-02" id="4904" precio="0">
-                
-        <GRUPO fechaCheckIn="2023-06-02" fechaCheckOut="2023-06-09" realizoCheckIn="false" realizoCheckOut="false">
-                        
-            <HUESPEDR contraseña="pass2" correoElectronico="pedro@example.com" documento="87654321" edad="30" nombre="jajajasoyyo" nombreUsuario="huesped" telefono="87654321"/>
-                        
-            <SERVICIO id="12" nombre="gaseosa" pagado="false" precio="1400"/>
-                        
-            <HUESPED contraseña="pass1" correoElectronico="juan@example.com" documento="12345678" edad="25" nombre="Juan" nombreUsuario="user1" telefono="12345678"/>
-                        
-            <HUESPED contraseña="pass2" correoElectronico="pedro@example.com" documento="87654321" edad="30" nombre="Pedro" nombreUsuario="user2" telefono="87654321"/>
-                    
-        </GRUPO>
-            
-    </RESERVA>
-    
-    <RESERVA estado="RESERVADA" fechaFin="2023-06-09" fechaInicio="2023-06-02" id="7664" precio="0">
-        <HABITACION aire="false" balcon="false" cafetera="false" calefaccion="false" capacidadAdultos="2" capacidadNinios="0" cocina="false" desayuno="false" id="5006" plancha="false" reservada="false" ropaCama="false" secador="false" tamanio="0" tamanioCama="0" tipo="0" tomasA="false" tomasC="false" tv="false" vista="true" voltaje="false"/>
-        <HABITACION aire="false" balcon="false" cafetera="false" calefaccion="false" capacidadAdultos="2" capacidadNinios="0" cocina="false" desayuno="false" id="5008" plancha="false" reservada="false" ropaCama="false" secador="false" tamanio="0" tamanioCama="0" tipo="0" tomasA="false" tomasC="false" tv="false" vista="true" voltaje="false"/>
-        <GRUPO fechaCheckIn="2023-06-02" fechaCheckOut="2023-06-09" realizoCheckIn="false" realizoCheckOut="false">
-            <HUESPEDR contraseña="pass2" correoElectronico="pedro@example.com" documento="87654321" edad="30" nombre="jajajasoyyo" nombreUsuario="huesped" telefono="87654321"/>
-            <SERVICIO id="12" nombre="gaseosa" pagado="false" precio="1400"/>
-            <HUESPED contraseña="pass1" correoElectronico="juan@example.com" documento="12345678" edad="25" nombre="Juan" nombreUsuario="user1" telefono="12345678"/>
-            <HUESPED contraseña="pass2" correoElectronico="pedro@example.com" documento="87654321" edad="30" nombre="Pedro" nombreUsuario="user2" telefono="87654321"/>
-        </GRUPO>
-    </RESERVA>
-    <RESERVA estado="RESERVADA" fechaFin="2023-06-09" fechaInicio="2023-06-02" id="8451" precio="0">
-        <GRUPO fechaCheckIn="2023-06-02" fechaCheckOut="2023-06-09" realizoCheckIn="false" realizoCheckOut="false">
-            <HUESPEDR contraseña="pass2" correoElectronico="pedro@example.com" documento="87654321" edad="30" nombre="jajajasoyyo" nombreUsuario="huesped" telefono="87654321"/>
-            <SERVICIO id="12" nombre="gaseosa" pagado="false" precio="1400"/>
-            <HUESPED contraseña="pass1" correoElectronico="juan@example.com" documento="12345678" edad="25" nombre="Juan" nombreUsuario="user1" telefono="12345678"/>
-            <HUESPED contraseña="pass2" correoElectronico="pedro@example.com" documento="87654321" edad="30" nombre="Pedro" nombreUsuario="user2" telefono="87654321"/>
-        </GRUPO>
-    </RESERVA>
 </RESERVAS>

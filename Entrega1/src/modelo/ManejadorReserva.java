@@ -139,22 +139,8 @@ public class ManejadorReserva {
 	        Node reservasNode = document.getElementsByTagName(RESERVAS).item(0);
 	        reservasNode.appendChild(reservaNode);
 	        
-	        // Guardar los cambios en el archivo
-	        TransformerFactory transformerFactory = TransformerFactory.newInstance();
-	        Transformer transformer = null;
-			try {
-				transformer = transformerFactory.newTransformer();
-			} catch (TransformerConfigurationException e) {
-				e.printStackTrace();
-			}
-	        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-	        DOMSource source = new DOMSource(document);
-	        StreamResult result = new StreamResult(XML_Reservas);
-	        try {
-				transformer.transform(source, result);
-			} catch (TransformerException e) {
-				e.printStackTrace();
-			}
+	        // Guarda los cambios
+	        guardarCambiosEnArchivo();
 	        
 	    }
 	
@@ -296,6 +282,38 @@ public class ManejadorReserva {
 		return grupo;
 	}
 	
+	public void cambiarEstadoReserva(int idReserva, Estado nuevoEstado) {
+	    NodeList nodosReservas = document.getElementsByTagName(RESERVA);
+
+	    // Recorre cada nodo de reserva
+	    for (int i = 0; i < nodosReservas.getLength(); i++) {
+	        Element elementoReserva = (Element) nodosReservas.item(i);
+	        int id = Integer.parseInt(elementoReserva.getAttribute("id"));
+
+	        // Comprueba si el ID coincide
+	        if (id == idReserva) {
+	            elementoReserva.setAttribute("estado", nuevoEstado.toString());
+	            guardarCambiosEnArchivo();
+	            break;
+	        }
+	    }
+	}
+
+	private void guardarCambiosEnArchivo() {
+	    TransformerFactory transformerFactory = TransformerFactory.newInstance();
+	    Transformer transformer;
+	    try {
+	        transformer = transformerFactory.newTransformer();
+	        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+	        DOMSource source = new DOMSource(document);
+	        StreamResult result = new StreamResult(XML_Reservas);
+	        transformer.transform(source, result);
+	    } catch (TransformerException e) {
+	        e.printStackTrace();
+	    }
+	    
+	    
+	}
 	
 	}
 
