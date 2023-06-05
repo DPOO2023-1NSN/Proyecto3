@@ -1,10 +1,13 @@
 package modelo.pasarelas;
 
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 
-import GUI.SubPaneles.FramePayPal;
+import GUI.SubPaneles.FrameSire;
+import procesamiento.Hotel;
 public class Sire extends PasarelaGeneral{
 	
     private String numeroTarjeta;
@@ -12,13 +15,16 @@ public class Sire extends PasarelaGeneral{
     private int anoCaducidad;
     private String nombreTitular;
     private int codigoSeguridad;
-    private String rutaArchivo= ("data/Registros de cobro/Paypal.txt");
+    private String rutaArchivo= ("data/Registros de cobro/Sire.txt");
     private int numeroCuenta;
     private int numeroTransaccion;
 
+    public Sire() {
+
+    }
 	
 	public void setAtributos(String numeroTarjeta, int mesCaducidad, int anoCaducidad, 
-			String nombreTitular, int codigoSeguridad, int monto, 
+			String nombreTitular, int codigoSeguridad,  
 			int numeroCuenta, int numeroTransaccion)  {
 		this.anoCaducidad= anoCaducidad;
 		this.codigoSeguridad=codigoSeguridad;
@@ -27,39 +33,49 @@ public class Sire extends PasarelaGeneral{
 		this.numeroCuenta=numeroCuenta;
 		this.numeroTarjeta=numeroTarjeta;
 		this.numeroTransaccion= numeroTransaccion;
+
 		
 	}
 
 	@Override
 	public void mostrarInterfaz() {
-		FramePayPal frame= new FrameSire( this);
 		
+		FrameSire frame= new FrameSire( this);
+		frame.setVisible(true);
 		
 	}
 
-	@Override
-	public void cambiarPasarela(String nombrePasarela) {
-		// TODO Auto-generated method stub
-		
-	}
+
 
 	@Override
 	public void registrarTransaccion()  {
 		PrintWriter writer;
+		// Abre el archivo en modo de agregar
+		FileWriter fw = null;
 		try {
-			writer = new PrintWriter(rutaArchivo, "UTF-8");
-			writer.println("---------------------------" );
-			writer.println("Id de la reserva: "+ this.idReserva );
-			writer.println("Nombre del titular: " + this.nombreTitular);
-			writer.println("Número de cuenta: " + this.numeroCuenta);
-			writer.println("Número de Tarjeta: " + this.numeroTarjeta);
-			writer.println("Número de Transaccion: " + this.numeroTransaccion);
-			
-			
-		} catch (FileNotFoundException e) {
+			fw = new FileWriter(rutaArchivo, true);
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (UnsupportedEncodingException e) {
+		}
+         
+		// Crea un PrintWriter usando FileWriter
+		writer = new PrintWriter(fw);
+       
+		
+         
+		writer.println("---------------------------" );
+		writer.println("Id de la reserva: "+ this.idReserva );
+		writer.println("Nombre del titular: " + this.nombreTitular);
+		writer.println("Número de cuenta: " + this.numeroCuenta);
+		writer.println("Número de Tarjeta: " + this.numeroTarjeta);
+		writer.println("Número de Transaccion: " + this.numeroTransaccion);
+		writer.println("Monto: " + this.monto);
+		 // Cierra el PrintWriter y FileWriter
+		writer.close();
+		try {
+			fw.close();
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
