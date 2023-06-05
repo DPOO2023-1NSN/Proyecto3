@@ -14,7 +14,7 @@
     
     
     
-    <RESERVA estado="RESERVADA" fechaFin="2023-01-30" fechaInicio="2023-01-26" id="7038" precio="0">
+    <RESERVA estado="RESERVADA" fechaFin="2023-01-30" fechaInicio="2023-01-26" id="7038" precio="400000">
                                                                                 
         
         
@@ -72,7 +72,7 @@
     
     
     
-    <RESERVA estado="RESERVADA" fechaFin="2023-06-08" fechaInicio="2023-06-06" id="7993" precio="0">
+    <RESERVA estado="RESERVADA" fechaFin="2023-06-08" fechaInicio="2023-06-06" id="7993" precio="100000">
                                         
         
         
@@ -102,7 +102,7 @@
     
     
     
-    <RESERVA estado="RESERVADA" fechaFin="2023-06-10" fechaInicio="2023-06-07" id="8387" precio="0">
+    <RESERVA estado="RESERVADA" fechaFin="2023-06-10" fechaInicio="2023-06-07" id="8387" precio="300000">
                                 
         
         
