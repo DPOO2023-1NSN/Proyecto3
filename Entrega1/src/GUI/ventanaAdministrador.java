@@ -11,6 +11,7 @@ import javax.swing.border.EmptyBorder;
 import GUI.SubPaneles.PanelCargarArchivoHabitaciones;
 import GUI.SubPaneles.PanelCargarPreciosHabitaciones;
 import GUI.SubPaneles.PanelConsultarHabitaciones;
+import GUI.SubPaneles.PanelCrearHabitaciones;
 import procesamiento.Hotel;
 
 
@@ -80,6 +81,8 @@ public class ventanaAdministrador extends JFrame implements ActionListener{
 		
 		JButton btnCrearHabitaciones = new JButton("Crear habitaciones");
 		btnCrearHabitaciones.setFont(new Font("Palatino Linotype", Font.PLAIN, 12));
+		btnCrearHabitaciones.addActionListener(this);
+		btnCrearHabitaciones.setActionCommand("crearH");
 		
 		JButton btnCargarArchivoDe = new JButton("Cargar archivo de habitaciones");
 		btnCargarArchivoDe.setFont(new Font("Palatino Linotype", Font.PLAIN, 12));
@@ -93,10 +96,10 @@ public class ventanaAdministrador extends JFrame implements ActionListener{
 		JLabel lblNewLabel_1_1_1 = new JLabel("       Opciones menÃº");
 		lblNewLabel_1_1_1.setFont(new Font("Palatino Linotype", Font.PLAIN, 12));
 		
-		JButton btnCargarMen = new JButton("Cargar menÃº");
+		JButton btnCargarMen = new JButton("Cargar menu");
 		btnCargarMen.setFont(new Font("Palatino Linotype", Font.PLAIN, 12));
 		
-		JButton btnEditarMen = new JButton("Editar menÃº");
+		JButton btnEditarMen = new JButton("Editar menu");
 		btnEditarMen.setFont(new Font("Palatino Linotype", Font.PLAIN, 12));
 		
 		JButton btnAsignarPreciosAl = new JButton("Asignar precios al menÃº");
@@ -181,6 +184,9 @@ public class ventanaAdministrador extends JFrame implements ActionListener{
 			
 		else if(grito.equals("cargarAH")) {
 			new PanelCargarArchivoHabitaciones(hotel);
+		}
+		else if(grito.equals("crearH")) {
+			new PanelCrearHabitaciones(hotel);
 		}
 		dispose();
 		

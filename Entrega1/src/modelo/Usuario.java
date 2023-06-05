@@ -11,14 +11,12 @@ public class Usuario {
 	private String contraseña;
 	private String nombre;
 	private String documento;
-	private static Informacion informacion;
 	
 	public Usuario(String nombreUsuario, String contraseña, String nombre, String documento) {
 		this.nombreUsuario = nombreUsuario;
 		this.contraseña = contraseña;
 		this.nombre = nombre;
 		this.documento = documento;
-		this.informacion= new Informacion();
 	}
 
 	public String getNombreUsuario() {
@@ -37,7 +35,7 @@ public class Usuario {
 		return documento;
 	}
 	public Informacion getinfo() {
-		return informacion;
+		return new Informacion();
 	}
 
 	

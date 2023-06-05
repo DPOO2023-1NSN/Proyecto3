@@ -82,39 +82,20 @@ public class Hotel {
 		informacion.addUsuario(huesped);
 	}
 
-	//FUNCCIONES ADMIN
-	public void asignarPrecioHabitaciones(int tipo, int diaInicio, int diaFin, int mesInicio, int mesfin, int diaSemanaInicio, int diaSemanaFin,
-			int precio)
-	{
-		//COMPLETAR-----------------------------------------------------
-	}
-	public void asignarMenusRestaurante( String rutaArchivo)
-	{
-		//COMPLETAR---------------------------------------------------------------
-	}
-	public void cambiarPlatoRestaurante( String nombrePlato, int nuevoPrecio)
-	{
-		//COMPLETAR---------------------------------------------------------------
-	}
+
 	public void crearHabitacion(int id, int tipo, int capacidadAdultos, int capacidadNiños, Boolean balcon, Boolean vista, Boolean cocina, int tamaño, Boolean aire, Boolean calefaccion, int tamañoCama, Boolean tv, Boolean cafetera, Boolean ropaCama, Boolean plancha, Boolean secador, Boolean voltaje, Boolean tomasA, Boolean tomasC, Boolean desayuno){
 		if (usuarioActual instanceof Administrador) {
 			((Administrador)usuarioActual).crearHabitacion(id, tipo, capacidadAdultos, capacidadNiños, balcon, vista, cocina, tamaño, aire, calefaccion, tamañoCama, tv, cafetera, ropaCama, plancha, secador, voltaje, tomasA, tomasC, desayuno);
 		}
 	}
-	public void caragarArchivoHabitaciones(String rutaArchivo){
-		//COMPLETAR______________________________________________________
-	}
-	public void caragarArchivoServicios(String rutaArchivo){
-		//COMPLETAR______________________________________________________
-	}
 
 	public Habitacion obtenerHabitacion(int id) {
 		Habitacion hab = null;
 		if (usuarioActual instanceof Administrador) {
-			hab = ((Administrador)usuarioActual).consultarHabitacion(informacion.getHabitaciones(), id);
+			hab = ((Administrador)usuarioActual).consultarHabitacion(usuarioActual.getinfo().getHabitaciones(), id);
 		}
 		else if (usuarioActual instanceof Empleado) {
-			hab = ((Empleado)usuarioActual).consultarHabitacion(informacion.getHabitaciones(), id);
+			hab = ((Empleado)usuarioActual).consultarHabitacion(usuarioActual.getinfo().getHabitaciones(), id);
 		}
 		return hab;
 	}

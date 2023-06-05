@@ -74,6 +74,8 @@ public class PanelCargarPreciosHabitaciones extends JFrame implements ActionList
 		tfDiaSemanaI.addItem("Domingo");
 		tfDiaSemanaI.setPreferredSize(new Dimension (100,50));
 		
+		
+		
 		JLabel mesI= new JLabel("Mes inicial:");
 		mesI.setPreferredSize(new Dimension (100,50));
 		
@@ -129,14 +131,14 @@ public class PanelCargarPreciosHabitaciones extends JFrame implements ActionList
 		panelMedio1.add(diaI);
 		panelMedio1.add(tfDiaI);
 		panelMedio1.add(diaSemanaI);
-		panelMedio1.add(tfDiaSemanaI);
+		//panelMedio1.add(tfDiaSemanaI);
 		panelMedio1.add(mesI);
 		panelMedio1.add(tfMesI);
 		
 		panelMedio2.add(diaF);
 		panelMedio2.add(tfDiaF);
 		panelMedio2.add(diaSemanaF);
-		panelMedio2.add(tfDiaSemanaF);
+		//panelMedio2.add(tfDiaSemanaF);
 		panelMedio2.add(mesF);
 		panelMedio2.add(tfMesF);
 		

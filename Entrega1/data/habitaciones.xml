@@ -1,50 +1,317 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <HABITACIONES>
-                                
+                                            
 
     
+    
+    
+    
     <HABITACION ID="6">
+                                
+        
+        
         <TIPO>0</TIPO>
+                                
+        
+        
         <CAPACIDADADULTOS>2</CAPACIDADADULTOS>
+                                
+        
+        
         <CAPACIDADNINIOS>0</CAPACIDADNINIOS>
+                                
+        
+        
         <RESERVADA>false</RESERVADA>
+                                
+        
+        
         <BALCON>false</BALCON>
+                                
+        
+        
         <VISTA>true</VISTA>
+                                
+        
+        
         <COCINA>false</COCINA>
+                                
+        
+        
         <TAMANIO>0</TAMANIO>
+                                
+        
+        
         <AIRE>false</AIRE>
+                                
+        
+        
         <CALEFACCION>false</CALEFACCION>
+                                
+        
+        
         <TAMANIOCAMA>0</TAMANIOCAMA>
+                                
+        
+        
         <TV>false</TV>
+                                
+        
+        
         <CAFETERA>true</CAFETERA>
+                                
+        
+        
         <ROPACAMA>false</ROPACAMA>
+                                
+        
+        
         <PLANCHA>false</PLANCHA>
+                                
+        
+        
         <SECADOR>false</SECADOR>
+                                
+        
+        
         <VOLTAJE>false</VOLTAJE>
+                                
+        
+        
         <TOMASA>false</TOMASA>
+                                
+        
+        
         <TOMASC>false</TOMASC>
+                                
+        
+        
         <DESAYUNO>false</DESAYUNO>
+                            
+    
+    
     </HABITACION>
+                
+    
+    
     <HABITACION ID="7">
+                                
+        
+        
+        <TIPO>0</TIPO>
+                                
+        
+        
+        <CAPACIDADADULTOS>2</CAPACIDADADULTOS>
+                                
+        
+        
+        <CAPACIDADNINIOS>0</CAPACIDADNINIOS>
+                                
+        
+        
+        <RESERVADA>false</RESERVADA>
+                                
+        
+        
+        <BALCON>false</BALCON>
+                                
+        
+        
+        <VISTA>true</VISTA>
+                                
+        
+        
+        <COCINA>false</COCINA>
+                                
+        
+        
+        <TAMANIO>0</TAMANIO>
+                                
+        
+        
+        <AIRE>false</AIRE>
+                                
+        
+        
+        <CALEFACCION>false</CALEFACCION>
+                                
+        
+        
+        <TAMANIOCAMA>0</TAMANIOCAMA>
+                                
+        
+        
+        <TV>false</TV>
+                                
+        
+        
+        <CAFETERA>false</CAFETERA>
+                                
+        
+        
+        <ROPACAMA>false</ROPACAMA>
+                                
+        
+        
+        <PLANCHA>false</PLANCHA>
+                                
+        
+        
+        <SECADOR>false</SECADOR>
+                                
+        
+        
+        <VOLTAJE>false</VOLTAJE>
+                                
+        
+        
+        <TOMASA>false</TOMASA>
+                                
+        
+        
+        <TOMASC>false</TOMASC>
+                                
+        
+        
+        <DESAYUNO>false</DESAYUNO>
+                            
+    
+    
+    </HABITACION>
+            
+    
+    
+    <HABITACION ID="1234">
+                        
+        
+        <TIPO>0</TIPO>
+                        
+        
+        <CAPACIDADADULTOS>2</CAPACIDADADULTOS>
+                        
+        
+        <CAPACIDADNINIOS>2</CAPACIDADNINIOS>
+                        
+        
+        <RESERVADA>false</RESERVADA>
+                        
+        
+        <BALCON>true</BALCON>
+                        
+        
+        <VISTA>true</VISTA>
+                        
+        
+        <COCINA>true</COCINA>
+                        
+        
+        <TAMANIO>2</TAMANIO>
+                        
+        
+        <AIRE>true</AIRE>
+                        
+        
+        <CALEFACCION>true</CALEFACCION>
+                        
+        
+        <TAMANIOCAMA>2</TAMANIOCAMA>
+                        
+        
+        <TV>true</TV>
+                        
+        
+        <CAFETERA>true</CAFETERA>
+                        
+        
+        <ROPACAMA>true</ROPACAMA>
+                        
+        
+        <PLANCHA>true</PLANCHA>
+                        
+        
+        <SECADOR>true</SECADOR>
+                        
+        
+        <VOLTAJE>true</VOLTAJE>
+                        
+        
+        <TOMASA>true</TOMASA>
+                        
+        
+        <TOMASC>true</TOMASC>
+                        
+        
+        <DESAYUNO>true</DESAYUNO>
+                    
+    
+    </HABITACION>
+        
+    
+    <HABITACION ID="222">
+                
+        <TIPO>0</TIPO>
+                
+        <CAPACIDADADULTOS>1</CAPACIDADADULTOS>
+                
+        <CAPACIDADNINIOS>1</CAPACIDADNINIOS>
+                
+        <RESERVADA>false</RESERVADA>
+                
+        <BALCON>true</BALCON>
+                
+        <VISTA>true</VISTA>
+                
+        <COCINA>true</COCINA>
+                
+        <TAMANIO>1</TAMANIO>
+                
+        <AIRE>true</AIRE>
+                
+        <CALEFACCION>true</CALEFACCION>
+                
+        <TAMANIOCAMA>1</TAMANIOCAMA>
+                
+        <TV>true</TV>
+                
+        <CAFETERA>true</CAFETERA>
+                
+        <ROPACAMA>true</ROPACAMA>
+                
+        <PLANCHA>true</PLANCHA>
+                
+        <SECADOR>true</SECADOR>
+                
+        <VOLTAJE>true</VOLTAJE>
+                
+        <TOMASA>true</TOMASA>
+                
+        <TOMASC>true</TOMASC>
+                
+        <DESAYUNO>true</DESAYUNO>
+            
+    </HABITACION>
+    
+    <HABITACION ID="44">
         <TIPO>0</TIPO>
         <CAPACIDADADULTOS>2</CAPACIDADADULTOS>
-        <CAPACIDADNINIOS>0</CAPACIDADNINIOS>
+        <CAPACIDADNINIOS>2</CAPACIDADNINIOS>
         <RESERVADA>false</RESERVADA>
-        <BALCON>false</BALCON>
+        <BALCON>true</BALCON>
         <VISTA>true</VISTA>
-        <COCINA>false</COCINA>
-        <TAMANIO>0</TAMANIO>
-        <AIRE>false</AIRE>
-        <CALEFACCION>false</CALEFACCION>
-        <TAMANIOCAMA>0</TAMANIOCAMA>
-        <TV>false</TV>
-        <CAFETERA>false</CAFETERA>
-        <ROPACAMA>false</ROPACAMA>
-        <PLANCHA>false</PLANCHA>
-        <SECADOR>false</SECADOR>
-        <VOLTAJE>false</VOLTAJE>
-        <TOMASA>false</TOMASA>
-        <TOMASC>false</TOMASC>
-        <DESAYUNO>false</DESAYUNO>
+        <COCINA>true</COCINA>
+        <TAMANIO>2</TAMANIO>
+        <AIRE>true</AIRE>
+        <CALEFACCION>true</CALEFACCION>
+        <TAMANIOCAMA>2</TAMANIOCAMA>
+        <TV>true</TV>
+        <CAFETERA>true</CAFETERA>
+        <ROPACAMA>true</ROPACAMA>
+        <PLANCHA>true</PLANCHA>
+        <SECADOR>true</SECADOR>
+        <VOLTAJE>true</VOLTAJE>
+        <TOMASA>true</TOMASA>
+        <TOMASC>true</TOMASC>
+        <DESAYUNO>true</DESAYUNO>
     </HABITACION>
 </HABITACIONES>
