@@ -301,6 +301,7 @@ public class Hotel {
   		 
   		 while (linea!= null) { 
   			listaPasarelas.add(linea);
+			 linea= lector.readLine();
   		 }
   			 return listaPasarelas;
 	}
