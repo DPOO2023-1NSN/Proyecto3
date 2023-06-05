@@ -8,7 +8,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import GUI.SubPaneles.GraficaFacturas;
 import GUI.SubPaneles.PanelCargarArchivoHabitaciones;
+import GUI.SubPaneles.PanelCargarArchivoMenu;
 import GUI.SubPaneles.PanelCargarPreciosHabitaciones;
 import GUI.SubPaneles.PanelConsultarHabitaciones;
 import procesamiento.Hotel;
@@ -95,13 +97,25 @@ public class ventanaAdministrador extends JFrame implements ActionListener{
 		
 		JButton btnCargarMen = new JButton("Cargar menÃº");
 		btnCargarMen.setFont(new Font("Palatino Linotype", Font.PLAIN, 12));
+		btnCargarMen.addActionListener(this);
+		btnCargarMen.setActionCommand("cargarMenu");
 		
-		JButton btnEditarMen = new JButton("Editar menÃº");
+		JButton btnEditarMen = new JButton("Gráfica Precios Facturas");
 		btnEditarMen.setFont(new Font("Palatino Linotype", Font.PLAIN, 12));
+		btnEditarMen.addActionListener(this);
+		btnEditarMen.setActionCommand("graficaFacturas");
 		
 		JButton btnAsignarPreciosAl = new JButton("Asignar precios al menÃº");
 		btnAsignarPreciosAl.setFont(new Font("Palatino Linotype", Font.PLAIN, 12));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
+		
+		JButton graficasFacturas = new JButton("Gráfica de facturas");
+		graficasFacturas.setFont(new Font("Palatino Linotype", Font.PLAIN, 12));
+		graficasFacturas.addActionListener(this);
+		graficasFacturas.setPreferredSize(new Dimension (200,100));
+		graficasFacturas.setActionCommand("gráfica facturas");
+		contentPane.add (graficasFacturas);
+		
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
@@ -181,6 +195,13 @@ public class ventanaAdministrador extends JFrame implements ActionListener{
 			
 		else if(grito.equals("cargarAH")) {
 			new PanelCargarArchivoHabitaciones(hotel);
+		}
+		else if(grito.equals("cargarMenu")) {
+			new PanelCargarArchivoMenu();
+		}
+		else if(grito.equals("graficaFacturas")) {
+			GraficaFacturas gf= new GraficaFacturas(hotel);
+			gf.paint(getGraphics());
 		}
 		dispose();
 		
