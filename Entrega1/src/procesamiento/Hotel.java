@@ -291,4 +291,17 @@ public class Hotel {
 	public Boolean getBbq() {
 		return bbq;
 	}
+	public ArrayList<String> getListaPasarelas() throws IOException {
+	  	BufferedReader lector = new BufferedReader (new FileReader (archivoPasarelas));
+  		 String linea = lector.readLine() ; 
+  		 ArrayList<String> listaPasarelas= new ArrayList<String>();
+  		 
+  		 while (linea!= null) { 
+  			listaPasarelas.add(linea);
+  		 }
+  			 return listaPasarelas;
+	}
+	public Informacion getInfo() {
+		return this.informacion;
+	}	
 }
