@@ -35,10 +35,11 @@ public class Hotel {
 	private Boolean recepcion;
 	private Boolean mascotas;
 
-
+	private File archivoPasarelas;
 
 
 	public Hotel () throws SAXException, IOException, ParserConfigurationException{
+		archivoPasarelas= new File ("data/listaPasarelas.txt");
 		this.informacion = new Informacion();
 		cargarConfig("data/config.txt");
 		listaUsuarios= new ArrayList<Usuario>();
