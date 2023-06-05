@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <USUARIOS>
-
+            
+    
     
     <USUARIO contraseña="1" documento="131321" nombre="fafa" servicio="administracion" type="empleado" usuario="empleado"/>
-                            
+                                    
+    
+    
     
     
     
@@ -11,28 +14,43 @@
     
     
     <USUARIO contraseña="1" documento="131321" nombre="fafa" servicio="administracion" type="administrador" usuario="admin"/>
+                                
+    
+    
+    
+    
+    
+    
+    
+    <USUARIO contraseña="jajja" documento="131321" nombre="fafa" servicio="administracion" type="empleado" usuario="sergio"/>
+                            
+    
+    
+    
+    
+    
+    
+    <USUARIO contraseña="jajja" documento="131321" nombre="fafa" servicio="administracion" type="empleado" usuario="sergio"/>
                         
     
     
     
     
     
-    <USUARIO contraseña="jajja" documento="131321" nombre="fafa" servicio="administracion" type="empleado" usuario="sergio"/>
-                    
-    
-    
-    
-    
-    <USUARIO contraseña="jajja" documento="131321" nombre="fafa" servicio="administracion" type="empleado" usuario="sergio"/>
-                
-    
-    
-    
     <USUARIO contraseña="sergio" documento="123141" nombre="sergio" type="administrador" usuario="sergio"/>
-                
+                        
 
     
+    
+    
     <USUARIO contraseña="hola" documento="14241" nombre="hola" type="administrador" usuario="hola"/>
+            
+    
     
     <USUARIO contraseña="1" correo="adafaf" documento="124124" edad="20" nombre="huesped1" telefono="4141414" type="huesped" usuario="huesped"/>
+        
+    
+    <USUARIO contraseña="fa" correo="f" documento="fafafa" edad="123" nombre="fa" telefono="f" type="huesped" usuario="prueba123"/>
+    
+    <USUARIO contraseña="a" correo="" documento=" " edad="12" nombre="a" telefono="a" type="huesped" usuario="a"/>
 </USUARIOS>

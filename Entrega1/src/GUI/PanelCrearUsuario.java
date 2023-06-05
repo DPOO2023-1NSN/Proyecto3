@@ -270,7 +270,7 @@ public class PanelCrearUsuario extends JPanel implements ActionListener{
 			else if(opcSeleccionada.equals("huesped")) {
 				hotel.registrarHuesped(txtUsuario.getText(), txtContraseña.getText(), txtNombre.getText(), txtDocumento.getText(), Integer.parseInt(txtEdad.getText()), txtCorreo.getText(), txtTelefono.getText());
 			}
-			inicio.volverLogin();
+			inicio.volverLogin(1);
 		}
 		
 	}

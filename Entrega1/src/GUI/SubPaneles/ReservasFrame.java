@@ -8,16 +8,19 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 
 import javax.swing.*;
 
+import Exceptions.FechasException;
 import GUI.ventanaEmpleado;
 import modelo.Grupo;
 import modelo.Habitacion;
 import modelo.Huesped;
 import modelo.Reserva;
 import procesamiento.Hotel;
+import Exceptions.FechasException;
 
 
 
@@ -247,10 +250,23 @@ public class ReservasFrame extends JFrame  implements ActionListener{
 		}
 	}
 
-	private void agregarHabitacion() {
+	private void agregarHabitacion() throws FechasException {
 		ArrayList<Habitacion> habs = hotel.getUsuarioActual().getinfo().getHabitaciones();
 		int idNuevo = 0;
+		Habitacion habitacionBuscada = null;
 		
+		LocalDate fechaI;
+		LocalDate fechaF;
+		// Excepcion si las fechas estan en formato incorrecto
+		try {
+			fechaI = LocalDate.parse(String.format("%s-%02d-%02d", textFieldAnio.getText(), Integer.parseInt(textFieldMes.getText()), Integer.parseInt(textFieldDia.getText())));
+			fechaF = LocalDate.parse(String.format("%s-%02d-%02d", textFieldAnio2.getText(), Integer.parseInt(textFieldMes2.getText()), Integer.parseInt(textFieldDia2.getText())));
+		}catch (DateTimeParseException e) {
+			throw new FechasException("Las fechas no estan en el formato correcto");
+		}catch (NumberFormatException e) {
+			throw new FechasException("La fecha tiene que ser un numero");
+		}
+		// Excepcion si el id no es un numero
 		try {
 			idNuevo = Integer.parseInt(textFieldHabitacion.getText());
 		}catch (Exception e) {
@@ -260,24 +276,45 @@ public class ReservasFrame extends JFrame  implements ActionListener{
 		for (Habitacion habitacion: habs) {
 			if (habitacion.getId() == idNuevo) {
 				// Si encuentra la habitacion
-				habitaciones.add(habitacion);
-
-				int contadorHabs = Integer.parseInt(labelAgregadosHabitacionCount.getText()) + 1;
-				labelAgregadosHabitacionCount.setText(Integer.toString(contadorHabs));
+				habitacionBuscada = habitacion;
 				break;
 			}
 		}
+		
+		// Si la habitacion esta vacia y encontro la habitacion la agrega
+		if (habitacionBuscada != null && hotel.verificarHabitacionVacia(habitacionBuscada.getId(), fechaI, fechaF)) {
+			habitaciones.add(habitacionBuscada);
+			int contadorHabs = Integer.parseInt(labelAgregadosHabitacionCount.getText()) + 1;
+			labelAgregadosHabitacionCount.setText(Integer.toString(contadorHabs));
+		}
+		else if (habitacionBuscada == null && idNuevo != 0)
+			reservaDialog("La habitacion no existe");
+		else if (!hotel.verificarHabitacionVacia(habitacionBuscada.getId(), fechaI, fechaF))
+			reservaDialog("La habitacion esta ocupada en el rango de fechas");
 
 	}
 
-	private void crearReserva() {
+	private void crearReserva() throws FechasException{
 
-		Huesped huespedR = huespedes.remove(0);
-		LocalDate fechaI = LocalDate.parse(textFieldAnio.getText() + "-" + textFieldMes.getText() + "-" + textFieldDia.getText());
-		LocalDate fechaF = LocalDate.parse(textFieldAnio2.getText() + "-" + textFieldMes2.getText() + "-" + textFieldDia2.getText());
-
+		LocalDate fechaI;
+		LocalDate fechaF;
+		// Excepcion si las fechas estan en formato incorrecto
+		try {
+			fechaI = LocalDate.parse(String.format("%s-%02d-%02d", textFieldAnio.getText(), Integer.parseInt(textFieldMes.getText()), Integer.parseInt(textFieldDia.getText())));
+			fechaF = LocalDate.parse(String.format("%s-%02d-%02d", textFieldAnio2.getText(), Integer.parseInt(textFieldMes2.getText()), Integer.parseInt(textFieldDia2.getText())));
+		}catch (DateTimeParseException e) {
+			throw new FechasException("Las fechas no estan en el formato correcto");
+		}
+		
+		// Crea los objetos necesarios para crear la reserva
+		Huesped huespedR = huespedes.remove(0);		
 		Grupo grupo = new Grupo(huespedes, huespedR, fechaI, fechaF);
 		Reserva reserva = new Reserva(grupo, fechaI, fechaF);
+		
+		// Agrega las habitaciones a la reserva
+		for (Habitacion habitacion: habitaciones) {
+			reserva.agregarHabitacion(habitacion);
+		}
 
 		// Se agrega la reserva al los datos
 		hotel.getUsuarioActual().getinfo().addReserva(reserva);
@@ -311,9 +348,17 @@ public class ReservasFrame extends JFrame  implements ActionListener{
 		if (accion.equals("agregarUsuario"))
 			agregarUsuario();
 		else if (accion.equals("agregarHabitacion"))
-			agregarHabitacion();
+			try {
+				agregarHabitacion();
+			} catch (FechasException e1) {
+				reservaDialog(e1.getMessage());
+			}
 		else if (accion.equals("reservar"))
-			crearReserva();
+			try {
+				crearReserva();
+			} catch (FechasException e1) {
+				reservaDialog(e1.getMessage());
+			}
 
 	}
 

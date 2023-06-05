@@ -16,6 +16,7 @@ import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 
 import GUI.ventanaEmpleado;
+import modelo.Estado;
 import procesamiento.Hotel;
 
 public class PanelCancelarReserva extends JFrame implements ActionListener{
@@ -78,6 +79,7 @@ public class PanelCancelarReserva extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		String accion = e.getActionCommand();
 		if (accion.equals("cancelar")) {
+			hotel.getUsuarioActual().getinfo().cambiarEstadoReserva(Integer.parseInt(txtId.getText()), Estado.CANCELADA);
 			new ventanaEmpleado(hotel);
 			dispose();
 		}

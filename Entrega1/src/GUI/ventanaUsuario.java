@@ -5,40 +5,36 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import GUI.SubPaneles.PanelConsultarDisponibilidad;
+import GUI.SubPaneles.ReservasFrame;
+import procesamiento.Hotel;
+
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.Color;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
 import javax.swing.JTable;
 
-public class ventanaUsuario extends JFrame {
+public class ventanaUsuario extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
 	private JTable table;
+	private Hotel hotel;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ventanaUsuario frame = new ventanaUsuario();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.
 	 */
-	public ventanaUsuario() {
+	public ventanaUsuario(Hotel hotel) {
+		this.hotel = hotel;
+		
+		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 741, 543);
 		contentPane = new JPanel();
@@ -54,9 +50,13 @@ public class ventanaUsuario extends JFrame {
 		
 		JButton btnNewButton = new JButton("Realizar Reserva");
 		btnNewButton.setFont(new Font("Palatino Linotype", Font.PLAIN, 12));
+		btnNewButton.addActionListener(this);
+		btnNewButton.setActionCommand("reservar");
 		
-		JButton btnNewButton_1 = new JButton("Cancelar Reserva ");
+		JButton btnNewButton_1 = new JButton("Consultar habitacion en un rango de fechas");
 		btnNewButton_1.setFont(new Font("Palatino Linotype", Font.PLAIN, 12));
+		btnNewButton_1.addActionListener(this);
+		btnNewButton_1.setActionCommand("consultar");
 		
 		table = new JTable();
 		
@@ -101,5 +101,17 @@ public class ventanaUsuario extends JFrame {
 					.addGap(85))
 		);
 		contentPane.setLayout(gl_contentPane);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		String accion = e.getActionCommand();
+		if (accion.equals("reservar")) {
+			new ReservasFrame(hotel);
+		}
+		else if(accion.equals("consultar")){
+			new PanelConsultarDisponibilidad(hotel);
+		}
+		
 	}
 }

@@ -260,6 +260,26 @@ public class Hotel {
 		}
 	}
 
+	public Boolean verificarHabitacionVacia(int habitacionId, LocalDate fechaI, LocalDate fechaF) {
+	    ArrayList<Reserva> reservas = getUsuarioActual().getinfo().getReservas();
+
+	    for (LocalDate date = fechaI; !date.isAfter(fechaF); date = date.plusDays(1)) {
+	        for (Reserva reserva : reservas) {
+	            for (Habitacion habitacion : reserva.getListaHabitaciones()) {
+	                if (habitacion.getId() == habitacionId &&
+	                        !reserva.getEstado().equals(Estado.CANCELADA) &&
+	                        (date.isEqual(reserva.getFechaInicio()) || date.isEqual(reserva.getFechaFin()) ||
+	                        (date.isAfter(reserva.getFechaInicio()) && date.isBefore(reserva.getFechaFin())))) {
+	                    return false; // La habitación no está vacía para el rango de fechas especificado
+	                }
+	            }
+	        }
+	    }
+
+	    return true; // La habitación está vacía para el rango de fechas especificado
+	}
+
+
 	public Usuario getUsuarioActual() {
 		return usuarioActual;
 	}
@@ -287,7 +307,7 @@ public class Hotel {
 	public Boolean getMascotas() {
 		return mascotas;
 	}
-	
+
 	public Boolean getBbq() {
 		return bbq;
 	}

@@ -1,5 +1,5 @@
 package modelo;
 
 public enum Estado {
-	ENPROCESO, RESERVADA, TERMINADA
+	ENPROCESO, RESERVADA, TERMINADA, CANCELADA
 }

@@ -84,7 +84,7 @@ public class Informacion {
 	}
 	
 	public void cambiarEstadoReserva(int id, Estado estado) {
-		
+		manejadorReserva.cambiarEstadoReserva(id, estado);
 	}
 	
 	public void agregarServicioReserva(int id, Servicio servicio) {

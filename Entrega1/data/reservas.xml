@@ -1,26 +1,120 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <RESERVAS>
-                                                                                                                            
+                                                                                                                                                    
 
 
     
 
+    
+    
+    
+    
+    
+    
     
     
     
     <RESERVA estado="RESERVADA" fechaFin="2023-01-30" fechaInicio="2023-01-26" id="7038" precio="0">
-                                
+                                                                                
+        
+        
+        
+        
+        
+        
         
         
         <GRUPO fechaCheckIn="2023-01-26" fechaCheckOut="2023-01-30" realizoCheckIn="false" realizoCheckOut="false">
-                                                
+                                                                                                                        
+            
+            
+            
+            
+            
+            
             
             
             <HUESPEDR contraseña="sergio" correoElectronico="313" documento="213" edad="0" nombre="responsable" nombreUsuario="sergio" telefono="13221"/>
-                                                
+                                                                                                                        
+            
+            
+            
+            
+            
+            
             
             
             <HUESPED contraseña="sergio" correoElectronico="313" documento="213" edad="0" nombre="segundo" nombreUsuario="sergio" telefono="13221"/>
+                                                                                                                    
+        
+        
+        
+        
+        
+        
+        
+        
+        </GRUPO>
+                                                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    </RESERVA>
+                                    
+
+
+    
+    
+    
+    
+    <RESERVA estado="RESERVADA" fechaFin="2023-06-08" fechaInicio="2023-06-06" id="7993" precio="0">
+                                        
+        
+        
+        
+        <HABITACION aire="false" balcon="false" cafetera="true" calefaccion="false" capacidadAdultos="2" capacidadNinios="0" cocina="false" desayuno="false" id="6" plancha="false" reservada="false" ropaCama="false" secador="false" tamanio="0" tamanioCama="0" tipo="0" tomasA="false" tomasC="false" tv="false" vista="true" voltaje="false"/>
+                                        
+        
+        
+        
+        <GRUPO fechaCheckIn="2023-06-06" fechaCheckOut="2023-06-08" realizoCheckIn="false" realizoCheckOut="false">
+                                                            
+            
+            
+            
+            <HUESPEDR contraseña="a" correoElectronico="a" documento="a" edad="0" nombre="a" nombreUsuario="a" telefono="a"/>
+                                                        
+        
+        
+        
+        </GRUPO>
+                                    
+    
+    
+    
+    </RESERVA>
+                
+    
+    
+    
+    <RESERVA estado="RESERVADA" fechaFin="2023-06-10" fechaInicio="2023-06-07" id="8387" precio="0">
+                                
+        
+        
+        <HABITACION aire="false" balcon="false" cafetera="true" calefaccion="false" capacidadAdultos="2" capacidadNinios="0" cocina="false" desayuno="false" id="6" plancha="false" reservada="false" ropaCama="false" secador="false" tamanio="0" tamanioCama="0" tipo="0" tomasA="false" tomasC="false" tv="false" vista="true" voltaje="false"/>
+                                
+        
+        
+        <GRUPO fechaCheckIn="2023-06-07" fechaCheckOut="2023-06-10" realizoCheckIn="false" realizoCheckOut="false">
+                                                
+            
+            
+            <HUESPEDR contraseña="a" correoElectronico="a" documento="a" edad="0" nombre="a" nombreUsuario="a" telefono="a"/>
                                             
         
         
@@ -30,4 +124,30 @@
     
     </RESERVA>
             
+    
+    
+    <RESERVA estado="CANCELADA" fechaFin="2023-06-12" fechaInicio="2023-06-06" id="2836" precio="0">
+                        
+        
+        <HABITACION aire="false" balcon="false" cafetera="true" calefaccion="false" capacidadAdultos="2" capacidadNinios="0" cocina="false" desayuno="false" id="6" plancha="false" reservada="false" ropaCama="false" secador="false" tamanio="0" tamanioCama="0" tipo="0" tomasA="false" tomasC="false" tv="false" vista="true" voltaje="false"/>
+                        
+        
+        <GRUPO fechaCheckIn="2023-06-06" fechaCheckOut="2023-06-12" realizoCheckIn="false" realizoCheckOut="false">
+                                    
+            
+            <HUESPEDR contraseña="a" correoElectronico="a" documento="a" edad="0" nombre="a" nombreUsuario="a" telefono="a"/>
+                                
+        
+        </GRUPO>
+                    
+    
+    </RESERVA>
+        
+
+    <RESERVA estado="RESERVADA" fechaFin="2023-07-20" fechaInicio="2023-06-07" id="2303" precio="0">
+        <HABITACION aire="false" balcon="false" cafetera="false" calefaccion="false" capacidadAdultos="2" capacidadNinios="0" cocina="false" desayuno="false" id="7" plancha="false" reservada="false" ropaCama="false" secador="false" tamanio="0" tamanioCama="0" tipo="0" tomasA="false" tomasC="false" tv="false" vista="true" voltaje="false"/>
+        <GRUPO fechaCheckIn="2023-06-07" fechaCheckOut="2023-07-20" realizoCheckIn="false" realizoCheckOut="false">
+            <HUESPEDR contraseña="a" correoElectronico="a" documento="a" edad="0" nombre="a" nombreUsuario="a" telefono="a"/>
+        </GRUPO>
+    </RESERVA>
 </RESERVAS>

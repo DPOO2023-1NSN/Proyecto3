@@ -20,6 +20,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.util.Scanner;
 
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -44,30 +45,42 @@ public class inicio extends JFrame implements ActionListener{
 	
 	//Paneles secundarios que se desplegarán
 	private JPanel  panelCrearUsuario;
+	private JPanel  panelCrearUsuarioHuesped;
 	private ventanaUsuario vUsuario;
 	//private ventanaAdministrador vAdmin;
 	private ventanaEmpleado vEmpleado;
 	
 	//Creación del procesamiento
 	private Hotel hotel;
+	
+	private int opcion;
 
 
 	public static void main(String[] args) {
+		System.out.println("Ingrese la opcion que desee:\n"
+				+ "1. App Hotel\n"
+				+ "2. App Huesped\n"
+				+ "Opcion: ");
 		
-		new inicio();
+		Scanner scanner = new Scanner(System.in);
+        int opcionS = Integer.parseInt(scanner.nextLine());
+        
+        if (opcionS == 1 || opcionS == 2)
+        	new inicio(opcionS);
 		
 	}
 
 	
-	public inicio(){
+	public inicio(int opcion){
 		try {
 			hotel = new Hotel();
 		} catch (SAXException | IOException | ParserConfigurationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		this.opcion = opcion;
 		panelCrearUsuario = new PanelCrearUsuario(hotel, this);
+		panelCrearUsuarioHuesped = new PanelCrearUsuarioHuesped(hotel, this);
 		
 		
 		// Configuracion JFrame
@@ -137,9 +150,13 @@ public class inicio extends JFrame implements ActionListener{
 		
 	}
 	
-	public void volverLogin() {
-		remove(panelCrearUsuario);
-	    add(contentPane);
+	public void volverLogin(int opcionS) {
+		if (opcionS == 1)
+			remove(panelCrearUsuario);
+		else
+			remove(panelCrearUsuarioHuesped);
+	    
+		add(contentPane);
 	    revalidate();
 	    repaint();
 	}
@@ -149,9 +166,16 @@ public class inicio extends JFrame implements ActionListener{
 
 		String accion = e.getActionCommand();
 		
-		if(accion.equals("Crear")) {
+		if(accion.equals("Crear") && opcion == 1) {
 			remove(contentPane);
 		    add(panelCrearUsuario);
+		    revalidate();
+		    repaint();
+			
+		}
+		else if(accion.equals("Crear") && opcion == 2) {
+			remove(contentPane);
+		    add(panelCrearUsuarioHuesped);
 		    revalidate();
 		    repaint();
 			
@@ -167,7 +191,7 @@ public class inicio extends JFrame implements ActionListener{
 				new ventanaEmpleado(hotel);
 			}
 			else {
-				vUsuario.main(null);
+				new ventanaUsuario(hotel);
 			}
 			
 			
