@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.io.File;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -35,10 +36,11 @@ public class Hotel {
 	private Boolean recepcion;
 	private Boolean mascotas;
 
-
+	private File archivoPasarelas;
 
 
 	public Hotel () throws SAXException, IOException, ParserConfigurationException{
+		archivoPasarelas= new File ("data/listaPasarelas.txt");
 		this.informacion = new Informacion();
 		cargarConfig("data/config.txt");
 		listaUsuarios= new ArrayList<Usuario>();
@@ -311,4 +313,17 @@ public class Hotel {
 	public Boolean getBbq() {
 		return bbq;
 	}
+	public ArrayList<String> getListaPasarelas() throws IOException {
+	  	BufferedReader lector = new BufferedReader (new FileReader (archivoPasarelas));
+  		 String linea = lector.readLine() ; 
+  		 ArrayList<String> listaPasarelas= new ArrayList<String>();
+  		 
+  		 while (linea!= null) { 
+  			listaPasarelas.add(linea);
+  		 }
+  			 return listaPasarelas;
+	}
+	public Informacion getInfo() {
+		return this.informacion;
+	}	
 }
