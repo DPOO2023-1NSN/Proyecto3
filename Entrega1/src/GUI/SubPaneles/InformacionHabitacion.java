@@ -1,4 +1,4 @@
-package GUI;
+package GUI.SubPaneles;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
