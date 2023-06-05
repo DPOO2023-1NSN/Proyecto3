@@ -103,7 +103,7 @@ public class ventanaAdministrador extends JFrame implements ActionListener{
 		btnCargarMen.addActionListener(this);
 		btnCargarMen.setActionCommand("cargarMenu");
 		
-		JButton btnEditarMen = new JButton("Editar menu");
+		JButton btnEditarMen = new JButton("Graf. Precios Facturas");
 		btnEditarMen.setFont(new Font("Palatino Linotype", Font.PLAIN, 12));
 		btnEditarMen.addActionListener(this);
 		btnEditarMen.setActionCommand("graficaFacturas");
